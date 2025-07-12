@@ -16,7 +16,7 @@ const router = Router();
 
 router.get('/three-legged', getThreeLeggedAuth);
 router.get('/two-legged', getTwoLeggedAuth);
-router.get('/logout', postLogoutAuth);
-router.post('/user-status', getUserStatusAuth);
+router.post('/logout', postLogoutAuth);
+router.get('/user-status', getUserStatusAuth);
 
 export default router;

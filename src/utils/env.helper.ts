@@ -18,8 +18,8 @@ export interface EnvConfig {
   APS_CLIENT_SECRET: string;
   REDIRECT_URI: string;
   AUTODESK_BASE_URL: string;
-  THREE_LEGGED_TOKEN_SCOPES: string;
-  TWO_LEGGED_TOKEN_SCOPES: string;
+  THREE_LEGGED_SCOPES: string;
+  TWO_LEGGED_SCOPES: string;
 }
 
 /** List of all required environment variable names */
@@ -31,8 +31,8 @@ const requiredVars: (keyof EnvConfig)[] = [
   'APS_CLIENT_SECRET',
   'REDIRECT_URI',
   'AUTODESK_BASE_URL',
-  'THREE_LEGGED_TOKEN_SCOPES',
-  'TWO_LEGGED_TOKEN_SCOPES',
+  'THREE_LEGGED_SCOPES',
+  'TWO_LEGGED_SCOPES',
 ];
 
 /**
@@ -53,7 +53,7 @@ export function getEnvConfig(): EnvConfig {
     APS_CLIENT_SECRET:       process.env.APS_CLIENT_SECRET!,
     REDIRECT_URI:            process.env.REDIRECT_URI!,
     AUTODESK_BASE_URL:       process.env.AUTODESK_BASE_URL!,
-    THREE_LEGGED_TOKEN_SCOPES: process.env.THREE_LEGGED_TOKEN_SCOPES!,
-    TWO_LEGGED_TOKEN_SCOPES:   process.env.TWO_LEGGED_TOKEN_SCOPES!,
+    THREE_LEGGED_SCOPES: process.env.THREE_LEGGED_TOKEN_SCOPES!,
+    TWO_LEGGED_SCOPES:   process.env.TWO_LEGGED_TOKEN_SCOPES!,
   };
 }

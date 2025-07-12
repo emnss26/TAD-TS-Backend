@@ -19,9 +19,16 @@ import env from './config/index';
 const app = express();
 const PORT = process.env.PORT;
 
+const corsOptions = {
+  origin: env.FRONTEND_URL,
+  credentials: true, 
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(cookieParser());
-app.use(cors());
 app.use(helmet());
 
 app.get(
